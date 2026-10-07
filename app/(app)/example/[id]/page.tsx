@@ -31,7 +31,7 @@ export default async function EditExamplePage({ params }: { params: Promise<{ id
 
   return (
     <div className="space-y-6">
-      <Link href="/example" className="text-sm text-brand underline">
+      <Link href="/example" className="inline-block text-sm text-brand underline">
         Back to the list
       </Link>
 

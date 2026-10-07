@@ -26,7 +26,7 @@ create table public.profiles (
 
 -- Makes a profile the first time someone signs in, named from their Google
 -- account. "security definer" lets this one function write the row for them;
--- "search_path = ''" stops it being tricked into using someone else's table.
+-- "search_path = ''" keeps it from being tricked into using someone else's table.
 create function public.handle_new_user()
 returns trigger
 language plpgsql
