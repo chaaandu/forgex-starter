@@ -1,0 +1,112 @@
+@import 'tailwindcss';
+
+/*
+  YOUR COLOURS
+  Change these to make the app look like your shop. Every screen uses them.
+  A colour is written as a hex code, like #1f6f5c. Pick one at
+  https://htmlcolorcodes.com or ask Cursor for a palette.
+  Tailwind turns each one into classes: --color-brand gives you bg-brand,
+  text-brand and border-brand.
+*/
+@theme {
+  --color-brand: #2f5d50; /* buttons, links and the selected tab */
+  --color-brand-ink: #ffffff; /* text that sits on the brand colour */
+  --color-page: #f6f6f3; /* the page background */
+  --color-card: #ffffff; /* boxes, lists and forms */
+  --color-ink: #1d1d1b; /* the main text */
+  --color-muted: #6b6b65; /* smaller, quieter text */
+  --color-line: #e2e2dc; /* borders and dividers */
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* The basics for every page. */
+@layer base {
+  body {
+    background: var(--color-page);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+}
+
+/* A few building blocks the screens reuse. */
+@layer components {
+  /* A white box with a border. */
+  .box {
+    background: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-radius: 0.75rem;
+  }
+
+  /* The main button. */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 2.75rem; /* big enough for a thumb */
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    background: var(--color-brand);
+    color: var(--color-brand-ink);
+    font-weight: 600;
+    transition: opacity 150ms;
+  }
+  .btn:hover {
+    opacity: 0.9;
+  }
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* A quieter button, outlined. */
+  .btn-quiet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.75rem;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-line);
+    background: var(--color-card);
+    color: var(--color-ink);
+    font-weight: 500;
+  }
+
+  /* Text boxes. */
+  .field {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--color-line);
+    border-radius: 0.5rem;
+    background: var(--color-card);
+    font-size: 1rem; /* 16px stops phones zooming in when you type */
+  }
+  .field:focus {
+    outline: 2px solid var(--color-brand);
+    outline-offset: 1px;
+  }
+
+  .label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

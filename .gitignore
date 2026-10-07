@@ -1,0 +1,22 @@
+# Packages npm installs. Never commit these.
+/node_modules
+
+# What Next.js builds
+/.next/
+/out/
+/build
+next-env.d.ts
+*.tsbuildinfo
+
+# Your secrets. .env.local holds your keys and must never reach GitHub.
+.env
+.env*.local
+
+# Vercel and system files
+.vercel
+.DS_Store
+*.pem
+npm-debug.log*
+
+# Playwright screenshots tooling
+/test-results/
