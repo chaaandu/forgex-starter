@@ -4,6 +4,6 @@
 // Your colours live in app/globals.css, at the top.
 
 export const appConfig = {
-  name: 'Mesa Starter',
+  name: 'ForgeX Starter',
   tagline: 'WhatsApp orders, kept in one place.',
 }

@@ -4,7 +4,7 @@
 import { missingSupabaseVars } from '@/lib/env'
 
 // Your README on GitHub. Change this to your own repo's link if you like.
-export const README_URL = 'https://github.com/chaaandu/mesa-starter'
+export const README_URL = 'https://github.com/chaaandu/forgex-starter'
 
 export default function SetupScreen({ title }: { title: string }) {
   const missing = missingSupabaseVars()

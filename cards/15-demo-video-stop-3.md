@@ -1,19 +1,18 @@
-# Card 15 · Your three-minute demo video
+# Card 15 · Your three-minute demo on Loom
 
-**Mon 26 Oct, before 6 pm IST · Stop 3** · Tools: Cursor, your phone
+**Mon 26 Oct, before 6 pm IST · Stop 3** · Tools: Cursor, Loom, your phone
 
 ## The task
 
-Record a demo video of 3 minutes or less, on your phone, using your live link. Send it before Stop 3, the third checkpoint.
+Record a demo of 3 minutes or less on **Loom**, on your phone, using your live link. **Loom** is a free app that records your screen and voice and gives you a link to share. Send the link before Stop 3, the third checkpoint.
 
 1. **Cursor.** Paste the prompt below. It writes your script from your README.
 2. **Your phone.** Turn on **Do Not Disturb**. Open your live link and sign in.
 3. **Your phone.** Do one dry run with a timer.
-4. **Your phone.** Record. Use your phone's screen recorder, with the microphone on:
-   - **iPhone**: in Control Centre, press and hold the record button, turn **Microphone** on, then tap **Start Recording**;
-   - **Android**: in Quick Settings, tap **Screen recorder** and choose to record **media and microphone**.
-5. **Your phone.** Watch it back once. If it's under 3 minutes and every tap is clear, it's done. One take is fine.
-6. **Before 6 pm IST**, open Stops in the ForgeX portal and send stop 3, with your video link.
+4. **Loom.** Install the Loom app from the App Store or Play Store and sign in with Google. Tap record, choose **Screen**, keep the microphone on, then open your live link and go.
+5. **Loom.** Watch it back once. If it's under 3 minutes and every tap is clear, it's done. One take is fine.
+6. **Loom.** Tap **Share**, check that anyone with the link can view, and copy the link. It looks like `loom.com/share/...`.
+7. **Before 6 pm IST**, open Stops in the ForgeX portal and send stop 3, with your Loom link.
 
 ## Why it matters
 
@@ -22,7 +21,7 @@ Three minutes is often all the time someone gives your work. One real order, sta
 ## Paste this into Cursor
 
 ```text
-Read README.md. Write the script for a 3-minute demo video I'll record on my phone.
+Read README.md. Write the script for a 3-minute demo I'll record on Loom, on my phone.
 - 0:00–0:20: who it's for, and the moment their day breaks.
 - 0:20–2:15: one real order, start to finish, on my live link: paste the
   WhatsApp message, pick the items, save, move it to paid, then show Today.
@@ -33,20 +32,21 @@ Two columns: what I say, and what I tap. Short lines. About 350 words of speech.
 
 ## When it works
 
-- The video is 3:00 or shorter, and the sound is clear.
+- The Loom is 3:00 or shorter, and the sound is clear.
+- The Loom link opens for someone who isn't signed in.
 - It shows one real order going from a WhatsApp message to paid.
-- The team has the video, your live link and your repo link.
+- Stop 3 in the portal has your Loom link, your live link and your repo link.
 
 ## If it breaks
 
-**The recording has no sound.** The microphone was off. On iPhone, press and hold the record button in Control Centre and turn **Microphone** on. On Android, choose **media and microphone** before you start.
+**The Loom has no sound.** The microphone was off. In the Loom app, tap the microphone before you record so it isn't crossed out, and allow microphone access if your phone asks.
 
 **A notification popped up in the middle.** Turn on **Do Not Disturb** and record again. A clean take is worth the extra 3 minutes.
 
 ## Commit now
 
-Add the video's link to the top of your README.
+Add your Loom link to the top of your README.
 
 ```text
-Add the demo video link
+Add the Loom demo link
 ```

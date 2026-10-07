@@ -10,7 +10,7 @@ GitHub keeps your code online. A **repo** (repository) is one project's folder t
 
 1. **GitHub.** Go to [github.com](https://github.com) and click **Sign up**. Use an email you'll still have after Mesa. Pick a username you'd put on a CV, because it shows in every link you share.
 2. **GitHub.** Verify your email when GitHub asks.
-3. **GitHub.** Open [github.com/chaaandu/mesa-starter](https://github.com/chaaandu/mesa-starter). Click **Use this template**, then **Create a new repository**. A **template** is a repo you copy to start your own.
+3. **GitHub.** Open [github.com/chaaandu/forgex-starter](https://github.com/chaaandu/forgex-starter). Click **Use this template**, then **Create a new repository**. A **template** is a repo you copy to start your own.
 4. **GitHub.** Under **Owner**, pick your account. Name it for your app, like `asha-bakes`. Choose **Public**, so the team can see your work. Click **Create repository**.
 5. **GitHub.** In your new repo, open `README.md` and click the pencil icon. Change the first line to your app's name, and add one line saying who it's for. Click **Commit changes**.
 
@@ -34,7 +34,7 @@ In plain words, with no jargon, and under 60 words each:
 ## When it works
 
 - Your repo lives at `github.com/your-name/your-app`.
-- Under its name, GitHub says **generated from chaaandu/mesa-starter**.
+- Under its name, GitHub says **generated from chaaandu/forgex-starter**.
 - The README's first line is your app's name.
 
 ## If it breaks

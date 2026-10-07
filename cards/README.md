@@ -20,7 +20,7 @@ All dates are 2026. All times are IST.
 | [12](12-phone-check-stop-2.md) | Fri 23 Oct, before 6 pm · Vercel workshop · **Stop 2** | Phone check: does every screen work on a phone? Then send |
 | [13](13-real-orders.md) | Sat 24 Oct | Put it in one owner's hands for real orders, and count what they do |
 | [14](14-readme-case-study.md) | Sun 25 Oct | Write the README case study |
-| [15](15-demo-video-stop-3.md) | Mon 26 Oct, before 6 pm · **Stop 3** | Record the three-minute demo video, from a phone |
+| [15](15-demo-video-stop-3.md) | Mon 26 Oct, before 6 pm · **Stop 3** | Record the three-minute demo on Loom, from a phone |
 | [Extra](extra-ai.md) | Any day after card 7 | Read a WhatsApp order with AI |
 
 ## How the cards fit together

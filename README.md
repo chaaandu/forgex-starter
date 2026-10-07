@@ -1,8 +1,8 @@
-# Mesa Starter
+# ForgeX Starter
 
 A small app for a shop that takes orders on WhatsApp. Paste the message, pick what they ordered, and see what came in today and what it adds up to.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/chaaandu/mesa-starter&project-name=mesa-starter&repository-name=mesa-starter&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY&envDescription=Your%20Supabase%20project%20URL%20and%20publishable%20(anon)%20key.%20Both%20are%20in%20Supabase%20under%20Connect.&envLink=https://github.com/chaaandu/mesa-starter%232-create-your-supabase-project)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/chaaandu/forgex-starter&project-name=forgex-starter&repository-name=forgex-starter&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY&envDescription=Your%20Supabase%20project%20URL%20and%20publishable%20(anon)%20key.%20Both%20are%20in%20Supabase%20under%20Connect.&envLink=https://github.com/chaaandu/forgex-starter%232-create-your-supabase-project)
 
 What it does:
 
@@ -35,7 +35,7 @@ Steps 1 to 6 all happen in your browser. You don't need to install anything unti
 GitHub keeps your code online. A **repo** (short for repository) is one project's folder on GitHub, with every change you've ever made to it.
 
 1. Sign in to GitHub.
-2. Open [github.com/chaaandu/mesa-starter](https://github.com/chaaandu/mesa-starter).
+2. Open [github.com/chaaandu/forgex-starter](https://github.com/chaaandu/forgex-starter).
 3. Click **Use this template**, then **Create a new repository**. A **template** is a repo you copy to start your own.
 4. Under **Owner**, pick your own account. Under **Repository name**, write a name for your app, like `asha-bakes`.
 5. Choose **Public**. Anyone can read a public repo's code, which is fine: your keys never go in the code (step 4 explains where they go).
@@ -157,7 +157,7 @@ Make the app look like it belongs to your shop. Two files hold everything.
 
 ```ts
 export const appConfig = {
-  name: 'Mesa Starter',
+  name: 'ForgeX Starter',
   tagline: 'WhatsApp orders, kept in one place.',
 }
 ```
