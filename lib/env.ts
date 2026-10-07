@@ -11,7 +11,7 @@ function anonKeyValue(): string | undefined {
   )
 }
 
-// The two variables Supabase needs. Without them the app runs on sample data.
+// The two variables Supabase needs. Without them the app runs in sample mode.
 export function missingSupabaseVars(): string[] {
   const missing: string[] = []
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL) missing.push('NEXT_PUBLIC_SUPABASE_URL')
@@ -34,7 +34,7 @@ export function supabaseKeys(): { url: string; anonKey: string } {
   return { url, anonKey }
 }
 
-// Which AI reads WhatsApp messages: 'gemini' (the default) or 'claude'.
+// Which AI answers askAI() in lib/ai.ts: 'gemini' (the default) or 'claude'.
 export type AiProvider = 'gemini' | 'claude'
 
 export function aiProvider(): AiProvider {

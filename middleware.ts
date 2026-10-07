@@ -1,6 +1,6 @@
 // Middleware runs before every page loads.
-// Its one job here: keep the owner's Supabase sign-in fresh, so they stay
-// signed in. Pages decide for themselves who may see them (lib/shop.ts).
+// Its one job here: keep each person's Supabase sign-in fresh, so they stay
+// signed in. Pages and actions decide for themselves who may see what (lib/auth.ts).
 
 import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
@@ -25,7 +25,7 @@ export async function middleware(request: NextRequest) {
         for (const { name, value, options } of cookiesToSet) {
           response.cookies.set(name, value, options)
         }
-        // Stops a shared cache from handing one owner's session to someone else.
+        // Stops a shared cache from handing one person's session to someone else.
         for (const [key, value] of Object.entries(headers)) response.headers.set(key, value)
       },
     },

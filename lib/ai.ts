@@ -1,58 +1,48 @@
-// Reads a WhatsApp message with AI and turns it into order lines.
+// Ask an AI model one question and get text back.
 //
-// AI is optional. It runs only when a key is set (see README, "Optional: turn
-// on AI"). AI_PROVIDER picks who reads the message:
-//   gemini (the default) uses GEMINI_API_KEY
-//   claude               uses ANTHROPIC_API_KEY
+// AI is optional, and off until you set a key (cards/extra-ai.md).
+// AI_PROVIDER picks who answers:
+//   gemini (the default) uses GEMINI_API_KEY, free from Google AI Studio
+//   claude               uses ANTHROPIC_API_KEY, paid, from console.anthropic.com
 //
-// This file only runs on the server, so the keys never reach the browser.
+// This file only runs on the server, so your keys never reach the browser.
+//
+// How to use it, from a server action or app/api/ai/route.ts:
+//
+//   const text = await askAI({
+//     instructions: '[What the AI should do, in plain words]',
+//     input: '[What the person typed or chose]',
+//   })
+//
+// Write your instructions with prompts/use-ai-for-one-step.md.
 
 import 'server-only'
 import Anthropic from '@anthropic-ai/sdk'
-import { zodOutputFormat } from '@anthropic-ai/sdk/helpers/zod'
 import { z } from 'zod'
-import { aiProvider } from '@/lib/env'
-import type { OrderLine, Product } from '@/lib/types'
+import { aiIsOn, aiProvider } from '@/lib/env'
 
-// The Gemini model. Set GEMINI_MODEL to try a different one.
+// The models. Set GEMINI_MODEL or CLAUDE_MODEL to try a different one.
 const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.8-flash'
-const CLAUDE_MODEL = 'claude-haiku-4-5'
+const CLAUDE_MODEL = process.env.CLAUDE_MODEL || 'claude-haiku-4-5'
 
-// The shape we ask the AI for. Zod checks the answer really has this shape.
-const AiAnswer = z.object({
-  lines: z.array(
-    z.object({
-      product_id: z.string().nullable(), // an id from the product list, or null
-      name: z.string(),
-      qty: z.number(),
-      price: z.number().nullable(), // only for items not in the list
-    }),
-  ),
-})
-type AiAnswer = z.infer<typeof AiAnswer>
+// The longest answer you'll get back, in tokens (about 3 words for every 4 tokens).
+const MAX_TOKENS = 1024
 
-// The instructions the AI gets with every message.
-function instructions(products: Product[]): string {
-  const list = products
-    .map((p) => `- id: ${p.id} | ${p.name} | ${p.unit} | Rs ${p.price}`)
-    .join('\n')
+export type AskAI = {
+  // What the AI should do: its job, the rules and the shape of the answer.
+  instructions: string
+  // What it works on this time.
+  input: string
+}
 
-  return [
-    'You read WhatsApp orders sent to a small shop in India.',
-    'Messages may mix English, Hindi and other Indian languages, with typos and short forms.',
-    'Turn the message into order lines.',
-    'Match each item to the product list below and use its id as product_id.',
-    'If an item is not in the list, set product_id to null, write its name, and set price to a number only if the message states one, else null.',
-    'qty is a whole number. If the message gives no quantity, use 1.',
-    'Ignore greetings, dates and delivery notes. If nothing is ordered, return an empty list.',
-    '',
-    'Product list:',
-    list || '(no products yet)',
-  ].join('\n')
+// The one function the rest of the app calls.
+export async function askAI({ instructions, input }: AskAI): Promise<string> {
+  if (!aiIsOn()) throw new Error('AI is off. Set a key first: see cards/extra-ai.md.')
+  return aiProvider() === 'claude' ? askClaude(instructions, input) : askGemini(instructions, input)
 }
 
 // Asks Gemini through its REST API. No extra package needed.
-async function askGemini(message: string, products: Product[]): Promise<AiAnswer> {
+async function askGemini(instructions: string, input: string): Promise<string> {
   const response = await fetch(
     `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`,
     {
@@ -62,30 +52,9 @@ async function askGemini(message: string, products: Product[]): Promise<AiAnswer
         'x-goog-api-key': process.env.GEMINI_API_KEY ?? '',
       },
       body: JSON.stringify({
-        systemInstruction: { parts: [{ text: instructions(products) }] },
-        contents: [{ role: 'user', parts: [{ text: message }] }],
-        generationConfig: {
-          responseMimeType: 'application/json',
-          responseSchema: {
-            type: 'OBJECT',
-            properties: {
-              lines: {
-                type: 'ARRAY',
-                items: {
-                  type: 'OBJECT',
-                  properties: {
-                    product_id: { type: 'STRING', nullable: true },
-                    name: { type: 'STRING' },
-                    qty: { type: 'NUMBER' },
-                    price: { type: 'NUMBER', nullable: true },
-                  },
-                  required: ['product_id', 'name', 'qty', 'price'],
-                },
-              },
-            },
-            required: ['lines'],
-          },
-        },
+        systemInstruction: { parts: [{ text: instructions }] },
+        contents: [{ role: 'user', parts: [{ text: input }] }],
+        generationConfig: { maxOutputTokens: MAX_TOKENS },
       }),
     },
   )
@@ -94,61 +63,33 @@ async function askGemini(message: string, products: Product[]): Promise<AiAnswer
     throw new Error(`Gemini answered ${response.status}: ${await response.text()}`)
   }
 
-  const body: unknown = await response.json()
-  const text = z
+  // Zod checks the answer has the shape we expect before we read it.
+  const body = z
     .object({
       candidates: z.array(
         z.object({ content: z.object({ parts: z.array(z.object({ text: z.string() })) }) }),
       ),
     })
-    .parse(body).candidates[0]?.content.parts[0]?.text
+    .parse(await response.json())
 
-  return AiAnswer.parse(JSON.parse(text ?? '{}'))
+  return (body.candidates[0]?.content.parts ?? [])
+    .map((part) => part.text)
+    .join('')
+    .trim()
 }
 
-// Asks Claude through the Anthropic SDK, with structured output.
-async function askClaude(message: string, products: Product[]): Promise<AiAnswer> {
+// Asks Claude through the Anthropic SDK.
+async function askClaude(instructions: string, input: string): Promise<string> {
   const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY })
-  const response = await client.messages.parse({
+  const response = await client.messages.create({
     model: CLAUDE_MODEL,
-    max_tokens: 2000,
-    system: instructions(products),
-    messages: [{ role: 'user', content: message }],
-    output_config: { format: zodOutputFormat(AiAnswer) },
+    max_tokens: MAX_TOKENS,
+    system: instructions,
+    messages: [{ role: 'user', content: input }],
   })
 
-  if (!response.parsed_output) throw new Error('Claude did not return order lines.')
-  return AiAnswer.parse(response.parsed_output)
-}
-
-// The one function the rest of the app calls.
-// It cleans up what the AI said: names and prices come from your product list,
-// quantities are whole numbers of at least 1, and unknown ids are dropped.
-export async function readOrderWithAi(message: string, products: Product[]): Promise<OrderLine[]> {
-  const answer =
-    aiProvider() === 'claude'
-      ? await askClaude(message, products)
-      : await askGemini(message, products)
-
-  const lines: OrderLine[] = []
-  for (const line of answer.lines) {
-    const qty = Math.max(1, Math.round(line.qty))
-    const product = products.find((p) => p.id === line.product_id)
-
-    const already = product && lines.find((l) => l.product_id === product.id)
-
-    if (already) {
-      already.qty += qty // the same product twice: add them up
-    } else if (product) {
-      lines.push({ product_id: product.id, name: product.name, qty, price: product.price })
-    } else if (line.name.trim()) {
-      lines.push({
-        product_id: null,
-        name: line.name.trim(),
-        qty,
-        price: Math.max(0, line.price ?? 0),
-      })
-    }
-  }
-  return lines
+  return response.content
+    .map((block) => (block.type === 'text' ? block.text : ''))
+    .join('')
+    .trim()
 }

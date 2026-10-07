@@ -1,5 +1,5 @@
 // A Supabase client for server code: pages, server actions and API routes.
-// It reads the signed-in owner from the cookies, so every query runs as them
+// It reads the signed-in person from the cookies, so every query runs as them
 // and the row-level security rules in the migration apply.
 
 import { createServerClient } from '@supabase/ssr'

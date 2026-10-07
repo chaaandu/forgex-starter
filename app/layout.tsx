@@ -1,4 +1,4 @@
-// The frame around every screen: the header, the tabs and the sample-data note.
+// The frame around every screen: the header, the tabs and the sample-mode note.
 
 import type { Metadata, Viewport } from 'next'
 import './globals.css'

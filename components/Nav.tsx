@@ -1,29 +1,31 @@
 'use client'
 
 // The tabs under the header. The tab for the screen you're on is underlined.
+//
+// TODO: add one line to TABS for each screen of your flow, like
+//   { href: '/[your-screen]', label: '[Your screen]' },
+// Remove the Example tab once you've copied it into your own screen.
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { signOut } from '@/app/login/actions'
 
 const TABS = [
-  { href: '/', label: 'Today' },
-  { href: '/orders/new', label: 'New order' },
-  { href: '/orders', label: 'Orders' },
-  { href: '/products', label: 'Products' },
+  { href: '/', label: 'Home' },
+  { href: '/example', label: 'Example' },
 ]
 
 export default function Nav({ signedIn, sampleMode }: { signedIn: boolean; sampleMode: boolean }) {
   const pathname = usePathname()
 
-  // No tabs before someone is signed in and has a shop.
-  const showTabs = sampleMode || (signedIn && pathname !== '/new-shop')
-  if (!showTabs) return <div className="h-4" />
+  // No tabs until someone is signed in. In sample mode there is no sign-in.
+  if (!sampleMode && !signedIn) return <div className="h-4" />
 
   return (
     <nav className="mx-auto flex max-w-2xl items-end gap-1 overflow-x-auto px-2 pt-3">
       {TABS.map((tab) => {
-        const active = pathname === tab.href
+        // A tab is on for its own address and anything under it, like /example/123.
+        const active = tab.href === '/' ? pathname === '/' : pathname.startsWith(tab.href)
         return (
           <Link
             key={tab.href}

@@ -1,4 +1,5 @@
-// Small helpers for showing money and time the way people in India read them.
+// Small helpers for showing money, dates and times the way people in India read them.
+// Use them in any screen you build.
 
 const INDIA = 'Asia/Kolkata'
 

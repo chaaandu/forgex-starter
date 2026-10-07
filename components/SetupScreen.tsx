@@ -13,7 +13,7 @@ export default function SetupScreen({ title }: { title: string }) {
     <section className="box p-5">
       <h1 className="text-xl font-semibold">{title}</h1>
       <p className="mt-2 text-muted">
-        The app is running. To sign in and save orders, it needs a Supabase project. These env
+        The app is running. To sign in and save for good, it needs a Supabase project. These env
         variables aren&apos;t set yet:
       </p>
       <ul className="mt-3 space-y-1">
@@ -40,7 +40,8 @@ export default function SetupScreen({ title }: { title: string }) {
         </li>
       </ol>
       <p className="mt-4 text-sm text-muted">
-        Until then, every screen works on the sample data in <code>lib/sample.ts</code>.
+        Until then, every screen works in sample mode, on the rows in{' '}
+        <code>lib/data/example-items.ts</code>.
       </p>
     </section>
   )

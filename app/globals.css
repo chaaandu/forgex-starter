@@ -2,7 +2,7 @@
 
 /*
   YOUR COLOURS
-  Change these to make the app look like your shop. Every screen uses them.
+  Change these to make the app look like yours (card 4). Every screen uses them.
   A colour is written as a hex code, like #1f6f5c. Pick one at
   https://htmlcolorcodes.com or ask Cursor for a palette.
   Tailwind turns each one into classes: --color-brand gives you bg-brand,
@@ -15,7 +15,7 @@
   --color-card: #ffffff; /* boxes, lists and forms */
   --color-ink: #1d1d1b; /* the main text */
   --color-muted: #6b6b65; /* smaller, quieter text */
-  --color-line: #e2e2dc; /* borders and dividers */
+  --color-line: #e2e2dc; /* lines around boxes and between rows */
 
   --font-sans: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 }

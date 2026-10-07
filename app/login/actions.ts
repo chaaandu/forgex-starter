@@ -1,6 +1,6 @@
 'use server'
 
-// Signing out. Used by the "Sign out" link in the tabs.
+// Signing out. Used by the Sign out link in the tabs.
 
 import { redirect } from 'next/navigation'
 import { supabaseIsSet } from '@/lib/env'

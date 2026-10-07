@@ -1,7 +1,7 @@
 'use client'
 
 // The "Sign in with Google" button.
-// It sends the owner to Google, and Google sends them back to /auth/callback.
+// It sends people to Google, and Google sends them back to /auth/callback.
 
 import { useState } from 'react'
 import { createBrowserSupabase } from '@/lib/supabase/browser'

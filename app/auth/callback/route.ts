@@ -1,6 +1,6 @@
-// Google sends the owner back here after they sign in.
+// Google sends people back here after they sign in.
 // The address carries a one-time code. We swap it for a Supabase session,
-// which signs the owner in, then go to the home screen.
+// which signs them in, then go to the home screen.
 
 import { NextResponse, type NextRequest } from 'next/server'
 import { supabaseIsSet } from '@/lib/env'
