@@ -4,7 +4,7 @@
 
 ## The task
 
-Record a demo of 3 minutes or less on **Loom**, on your phone, using your live link. **Loom** is a free app that records your screen and voice and gives you a link to share. Send the link before Phase 3, the end of phase 3.
+Record a demo of 3 minutes or less on **Loom**, on your phone, using your live link. **Loom** is a free app that records your screen and voice and gives you a link to share. Send the link before phase 3 is due at 6 pm.
 
 1. **Cursor.** Paste the prompt below. It writes your script from your README.
 2. **Your phone.** Turn on **Do Not Disturb**. Open your live link and sign in.

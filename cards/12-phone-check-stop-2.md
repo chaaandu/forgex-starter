@@ -4,7 +4,7 @@
 
 ## The task
 
-Use every screen on a real phone, through your live link. Fix what breaks. Then send your work before Phase 2, the end of phase 2.
+Use every screen on a real phone, through your live link. Fix what breaks. Then send your work before phase 2 is due at 6 pm.
 
 1. **Your phone.** Open your live link in Chrome or Safari. Go through every screen with one thumb:
    - sign in with Google;

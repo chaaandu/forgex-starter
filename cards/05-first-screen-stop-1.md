@@ -4,7 +4,7 @@
 
 ## The task
 
-Build the first screen of your flow: the one your research pointed to. Then check your live link and your repo before Phase 1, the end of phase 1, where the team looks at both.
+Build the first screen of your flow: the one your research pointed to. Then check your live link and your repo before phase 1 is due at 6 pm, when the team looks at both.
 
 1. **Claude.** Tell Claude who you're building for and where their day breaks. Ask: what is the one screen that would help at that exact moment? Keep it to one screen.
 2. **Cursor.** If that screen already exists in the starter (New order, Orders, Today, Products), ask Cursor to change that file instead. If it's new, paste the prompt below.
