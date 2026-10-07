@@ -16,7 +16,7 @@ Use every screen on a real phone, through your live link. Fix what breaks. Then 
 2. **Your phone.** Take a screenshot of anything that's cut off, too small to tap, or hidden by the keyboard.
 3. **Cursor.** Paste the prompt below with what you found. Push, and check again on the phone.
 4. **Vercel.** Open **Deployments** and check the latest one says **Ready** and matches your latest commit.
-5. **Before 6 pm IST**, send your live link and your repo link to the Mesa team, the way they asked.
+5. **Before 6 pm IST**, open Stops in the ForgeX portal and send stop 2. Your live link and repo link are already there if you added them to your steps.
 
 ## Why it matters
 

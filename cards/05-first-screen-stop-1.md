@@ -15,6 +15,7 @@ Build the first screen of your flow: the one your research pointed to. Then chec
    - your repo is public;
    - your latest commit is from today;
    - the first lines of your README say who you're building for.
+6. **ForgeX portal.** Open Stops and send stop 1. Your repo and live link are already filled in if you added them to your steps.
 
 Supabase isn't connected yet, so the screen runs on **sample data**: made-up rows kept in `lib/sample.ts`. Card 10 connects the real database, and card 11 moves your screen's data across.
 

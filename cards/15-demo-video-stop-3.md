@@ -13,7 +13,7 @@ Record a demo video of 3 minutes or less, on your phone, using your live link. S
    - **iPhone**: in Control Centre, press and hold the record button, turn **Microphone** on, then tap **Start Recording**;
    - **Android**: in Quick Settings, tap **Screen recorder** and choose to record **media and microphone**.
 5. **Your phone.** Watch it back once. If it's under 3 minutes and every tap is clear, it's done. One take is fine.
-6. **Before 6 pm IST**, send the video, your live link and your repo link to the Mesa team, the way they asked.
+6. **Before 6 pm IST**, open Stops in the ForgeX portal and send stop 3, with your video link.
 
 ## Why it matters
 
