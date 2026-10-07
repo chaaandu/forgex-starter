@@ -1,10 +1,10 @@
 # Card 15 · Your three-minute demo on Loom
 
-**Mon 26 Oct, before 6 pm IST · Stop 3** · Tools: Cursor, Loom, your phone
+**Mon 26 Oct, before 6 pm IST · Phase 3** · Tools: Cursor, Loom, your phone
 
 ## The task
 
-Record a demo of 3 minutes or less on **Loom**, on your phone, using your live link. **Loom** is a free app that records your screen and voice and gives you a link to share. Send the link before Stop 3, the third checkpoint.
+Record a demo of 3 minutes or less on **Loom**, on your phone, using your live link. **Loom** is a free app that records your screen and voice and gives you a link to share. Send the link before Phase 3, the end of phase 3.
 
 1. **Cursor.** Paste the prompt below. It writes your script from your README.
 2. **Your phone.** Turn on **Do Not Disturb**. Open your live link and sign in.
@@ -12,7 +12,7 @@ Record a demo of 3 minutes or less on **Loom**, on your phone, using your live l
 4. **Loom.** Install the Loom app from the App Store or Play Store and sign in with Google. Tap record, choose **Screen**, keep the microphone on, then open your live link and go.
 5. **Loom.** Watch it back once. If it's under 3 minutes and every tap is clear, it's done. One take is fine.
 6. **Loom.** Tap **Share**, check that anyone with the link can view, and copy the link. It looks like `loom.com/share/...`.
-7. **Before 6 pm IST**, open Stops in the ForgeX portal and send stop 3, with your Loom link.
+7. **Before 6 pm IST**, open Phases in the ForgeX portal and send phase 3, with your Loom link.
 
 ## Why it matters
 
@@ -35,7 +35,7 @@ Two columns: what I say, and what I tap. Short lines. About 350 words of speech.
 - The Loom is 3:00 or shorter, and the sound is clear.
 - The Loom link opens for someone who isn't signed in.
 - It shows one real order going from a WhatsApp message to paid.
-- Stop 3 in the portal has your Loom link, your live link and your repo link.
+- Phase 3 in the portal has your Loom link, your live link and your repo link.
 
 ## If it breaks
 

@@ -1,6 +1,6 @@
 # Card 10 · Connect Supabase and Google sign-in
 
-**Wed 21 Oct · Google Cloud and Supabase workshop** · Tools: Supabase, Google Cloud Console, Vercel, Cursor
+**Wed 21 Oct · Google Cloud and Supabase session** · Tools: Supabase, Google Cloud Console, Vercel, Cursor
 
 ## The task
 

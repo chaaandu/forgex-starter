@@ -1,6 +1,6 @@
 # Card 2 · Run it on your laptop
 
-**Tue 13 Oct · Cursor and Copilot workshop** · Tools: Cursor, Copilot, GitHub
+**Tue 13 Oct · Cursor and Copilot session** · Tools: Cursor, Copilot, GitHub
 
 ## The task
 
@@ -18,7 +18,7 @@ Open your repo in Cursor and run the app on your laptop.
 7. **Browser.** Open [http://localhost:3000](http://localhost:3000). **localhost** means your own laptop: only you can see it.
 8. **Cursor.** Open `lib/sample.ts`. Change `Sample home bakery` to the kind of shop you're building for. Save, and reload the browser.
 
-**Copilot** works in VS Code and on github.com, where you can open any file and ask it to explain the code. Your workshop shows where each tool fits. Any prompt in these cards works in Copilot Chat too.
+**Copilot** works in VS Code and on github.com, where you can open any file and ask it to explain the code. Your session shows where each tool fits. Any prompt in these cards works in Copilot Chat too.
 
 ## Why it matters
 

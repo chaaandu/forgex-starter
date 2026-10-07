@@ -1,10 +1,10 @@
 # Card 5 · Your first screen
 
-**Fri 16 Oct, before 6 pm IST · Stop 1** · Tools: Claude, Cursor, GitHub, Vercel
+**Fri 16 Oct, before 6 pm IST · Phase 1** · Tools: Claude, Cursor, GitHub, Vercel
 
 ## The task
 
-Build the first screen of your flow: the one your research pointed to. Then check your live link and your repo before Stop 1, the first checkpoint, where the team looks at both.
+Build the first screen of your flow: the one your research pointed to. Then check your live link and your repo before Phase 1, the end of phase 1, where the team looks at both.
 
 1. **Claude.** Tell Claude who you're building for and where their day breaks. Ask: what is the one screen that would help at that exact moment? Keep it to one screen.
 2. **Cursor.** If that screen already exists in the starter (New order, Orders, Today, Products), ask Cursor to change that file instead. If it's new, paste the prompt below.
@@ -15,7 +15,7 @@ Build the first screen of your flow: the one your research pointed to. Then chec
    - your repo is public;
    - your latest commit is from today;
    - the first lines of your README say who you're building for.
-6. **ForgeX portal.** Open Stops and send stop 1. Your repo and live link are already filled in if you added them to your steps.
+6. **ForgeX portal.** Open Phases and send phase 1. Your repo and live link are already filled in if you added them to your steps.
 
 Supabase isn't connected yet, so the screen runs on **sample data**: made-up rows kept in `lib/sample.ts`. Card 10 connects the real database, and card 11 moves your screen's data across.
 

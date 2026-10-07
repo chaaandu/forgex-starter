@@ -1,10 +1,10 @@
 # Card 12 · Phone check, then send
 
-**Fri 23 Oct, before 6 pm IST · Vercel workshop · Stop 2** · Tools: your phone, Cursor, Vercel
+**Fri 23 Oct, before 6 pm IST · Vercel session · Phase 2** · Tools: your phone, Cursor, Vercel
 
 ## The task
 
-Use every screen on a real phone, through your live link. Fix what breaks. Then send your work before Stop 2, the second checkpoint.
+Use every screen on a real phone, through your live link. Fix what breaks. Then send your work before Phase 2, the end of phase 2.
 
 1. **Your phone.** Open your live link in Chrome or Safari. Go through every screen with one thumb:
    - sign in with Google;
@@ -16,7 +16,7 @@ Use every screen on a real phone, through your live link. Fix what breaks. Then 
 2. **Your phone.** Take a screenshot of anything that's cut off, too small to tap, or hidden by the keyboard.
 3. **Cursor.** Paste the prompt below with what you found. Push, and check again on the phone.
 4. **Vercel.** Open **Deployments** and check the latest one says **Ready** and matches your latest commit.
-5. **Before 6 pm IST**, open Stops in the ForgeX portal and send stop 2. Your live link and repo link are already there if you added them to your steps.
+5. **Before 6 pm IST**, open Phases in the ForgeX portal and send phase 2. Your live link and repo link are already there if you added them to your steps.
 
 ## Why it matters
 
@@ -50,5 +50,5 @@ each fix.
 ## Commit now
 
 ```text
-Phone fixes from the Stop 2 check
+Phone fixes from the Phase 2 check
 ```
