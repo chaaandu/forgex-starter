@@ -19,7 +19,7 @@ Build it by copying the example pattern:
    SAMPLE_ROWS to 3 rows that fit my screen. Keep both halves of every
    function: sample mode and Supabase.
 3. Change the fields in the forms and the Zod check in actions.ts to my columns.
-   Keep the order in every action: getUserId(), then Zod, then save, then
+   Keep the same steps in every action: getUserId(), then Zod, then save, then
    revalidatePath.
 4. Use the pieces in components/ (Button, Field, Card, EmptyState, PageHeader)
    and the classes in app/globals.css. Don't add packages.

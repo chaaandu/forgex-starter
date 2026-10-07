@@ -24,7 +24,7 @@ Do 3 things:
    of every function, and keep the .eq('owner_id', ownerId) filters.
 3. Don't change 0001_base.sql, and don't touch any screen yet.
 Then explain, in plain words, what each RLS policy in the new file allows.
-Remind me that the SQL only takes effect once I run it in the Supabase SQL Editor.
+Tell me that the SQL only takes effect once I run it in the Supabase SQL Editor.
 ```
 
 **When it works:** you have a new migration file and a new data file, and `npm run build` still passes. On card 10 or later, run the migration in Supabase.

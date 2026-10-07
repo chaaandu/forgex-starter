@@ -223,7 +223,7 @@ Don't touch any other file. Then tell me which lines you changed.
 You build your app one screen at a time, always in the same 4 steps.
 
 1. **Fill in the frameworks.** Your research doc ([`01`](frameworks/01-research-doc.md)) feeds your solution ([`02`](frameworks/02-your-solution.md)). Your solution gives you one core flow ([`03`](frameworks/03-flows.md)), and the flow gives you your tables ([`04`](frameworks/04-data.md)).
-2. **Plan with Cursor.** Paste [`prompts/plan-my-app.md`](prompts/plan-my-app.md). It turns your solution and flow into a list of screens and tables, in the order to build them. It writes no code.
+2. **Plan with Cursor.** Paste [`prompts/plan-my-app.md`](prompts/plan-my-app.md). It turns your solution and flow into a list of screens and tables, and which to build first. It writes no code.
 3. **Copy the example folder.** Every screen starts as a copy of `app/(app)/example/`, renamed. [`prompts/build-a-screen.md`](prompts/build-a-screen.md) does it with you.
 4. **Add a tab.** Add one line to `TABS` in `components/Nav.tsx`.
 

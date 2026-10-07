@@ -6,7 +6,7 @@
 
 Connect the real database and Google sign-in, so what people save is kept for good, and private to them.
 
-1. **Supabase.** Do README step 2: create the project, then run `supabase/migrations/0001_base.sql` in the **SQL Editor**. Then run each of your own migration files, in number order.
+1. **Supabase.** Do README step 2: create the project, then run `supabase/migrations/0001_base.sql` in the **SQL Editor**. Then run each of your own migration files, lowest number first.
 2. **Google Cloud Console and Supabase.** Do README step 3: the OAuth client, and Google turned on in Supabase.
 3. **Your laptop.** Copy `.env.example` to a new file, `.env.local`. Fill in `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY`. Quit the app with Ctrl+C and run `npm run dev` again. An **env variable** is a setting kept outside your code, like these keys.
 4. **Vercel.** Add the same two under **Settings**, then **Environment Variables**. Then **Deployments**, the **⋯** on the latest one, and **Redeploy**.

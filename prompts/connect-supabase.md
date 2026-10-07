@@ -5,13 +5,13 @@
 Replace every `[bracket]`, brackets and all. Paste it into the chat in Cursor.
 
 ```text
-I've just connected Supabase to this app. Help me check it, step by step.
+I've connected Supabase to this app. Help me check it, step by step.
 Don't change any code unless a step fails, and ask me before you do.
 
 1. Read .env.example and lib/env.ts. Tell me exactly which 2 lines my
    .env.local needs. (I'll fill in the values myself. Never ask me to paste a key.)
 2. Read supabase/migrations/. List every file, and tell me to run each one in
-   the Supabase SQL Editor, in number order, if I haven't yet. My tables are:
+   the Supabase SQL Editor, lowest number first, if I haven't yet. My tables are:
    example_items, [your_table], [another table, if any].
 3. Read lib/data/. For each file, check the column names in the Supabase half
    match the columns in its migration. List any that don't.

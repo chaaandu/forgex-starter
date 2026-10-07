@@ -99,17 +99,17 @@ Find 3 people who buy from a kirana every week and also use Blinkit, Zepto or In
 - **Why each goes where it goes, in their words:** [ ]
 - **The last time they chose the app over the shop:** [ ]
 
-## 3. What a kirana has that a dark store can't copy
+## 3. What a dark store can't copy
 
-List what you saw or heard yourself. Name who said it, or where you saw it.
+What a kirana has that a dark store can't copy. List what you saw or heard yourself. Name who said it, or where you saw it.
 
 1. [what it is] · [who said it, or where you saw it]
 2. [what it is] · [who said it, or where you saw it]
 3. [what it is] · [who said it, or where you saw it]
 
-## 4. The moment a household chooses the app over the shop
+## 4. When a household picks the app
 
-Pick one real moment from your interviews and describe it as it happened.
+The moment a household chooses the app over the shop. Pick one real moment from your interviews and describe it as it happened.
 
 - **When:** [day and time]
 - **Who:** [which regular]

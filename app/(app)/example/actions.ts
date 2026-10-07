@@ -7,7 +7,7 @@
 // to your own table everywhere. prompts/build-a-screen.md does it with you.
 //
 // A server action is a function that runs on the server when a form is sent.
-// Every action here does the same 4 things, in the same order:
+// Every action here does the same 4 things, one after another:
 //   1. Who is this? getUserId(), from the session. Never trust a form for this.
 //   2. Is the input sensible? Zod checks it.
 //   3. Save it, through lib/data/example-items.ts.
