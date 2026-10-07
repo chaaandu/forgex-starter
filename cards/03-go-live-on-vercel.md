@@ -21,7 +21,7 @@ From now on, every push to GitHub deploys again on its own, in about a minute.
 
 ## Why it matters
 
-A link on a phone is something an owner can try today, and the team checks it at every stop.
+A link on a phone is something an owner can try today, and the team checks it at every phase.
 
 ## Paste this into Cursor
 

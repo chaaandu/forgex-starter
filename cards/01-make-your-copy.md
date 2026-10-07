@@ -16,7 +16,7 @@ GitHub keeps your code online. A **repo** (repository) is one project's folder t
 
 ## Why it matters
 
-Every day's work from now to 30 Oct lands in this repo, and its link is what you send at each stop.
+Every day's work from now to 30 Oct lands in this repo, and its link is what you send at each phase.
 
 ## Paste this into Cursor
 
