@@ -1,6 +1,6 @@
 # Record the 3-minute demo on Loom
 
-**Card 15** · Mon 26 Oct, before 6 pm IST · **Phase 3 due** · Tools: Cursor, Loom, your phone
+**Card 15** · Mon 26 Oct, before 6 pm IST · **Phase 3 due** · Tools: Cursor, Loom, Product Hunt, your phone
 
 ## The task
 
@@ -15,7 +15,8 @@ Record a demo of 3 minutes or less on **Loom**, on your phone, using your live l
 5. **Loom.** Watch it back once. If it's under 3 minutes and every tap is clear, it's done. One take is fine.
 6. **Loom.** Tap **Share**. Set it so **anyone with the link can view**, and copy the link. It looks like `loom.com/share/...`.
 7. **Cursor.** Add the Loom link to the top of your README. Commit and push.
-8. **Before 6 pm IST**, open **Phases** in the ForgeX portal and send phase 3, with your Loom link.
+8. **Product Hunt.** Publish your product on [producthunt.com](https://www.producthunt.com): its name, one line on what it does, your Loom, your live link and 3 phone screenshots. **Product Hunt** is where new products are launched for anyone to try. Share the link with your owners and the cohort.
+9. **Before 6 pm IST**, open **Phases** in the ForgeX portal and send phase 3, with your Loom link and your Product Hunt link.
 
 ## Why it matters
 
